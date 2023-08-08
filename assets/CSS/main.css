@@ -1,0 +1,461 @@
+/* start componants */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #ed893d;
+    --text-color: #777;
+    --section-padding: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 120px;
+}
+
+
+/* L screens */
+@media (max-width: 992px) {
+    .container {
+        margin: 0 60px;
+    }
+}
+
+/* M screens */
+@media (max-width: 768px) {
+    .container {
+        margin: 0 30px;
+    }
+}
+
+/* s screens */
+@media (max-width: 576px) {
+    .container {
+        margin: 0px;
+        padding: 0 20px;
+    }
+}
+
+.heading {
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.heading h2{
+    font-size: 45px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.heading p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* end componants */
+/* Start Header */
+header {
+    position: sticky;
+    padding : 20px 0;
+    background-color: white;
+    box-shadow: 1px 0px 20px rgba(0,0,0,0.1);
+    top: 0;
+
+}
+
+header .logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+header .logo a {
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: black;
+}
+
+header .logo a span {
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 990px) {
+    header nav .toggle-menu {
+        display: block;
+    }
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+@media (max-width: 990px) {
+    header nav ul {
+        display: none;
+    }
+}
+
+header nav ul li {
+    padding: 10px 0 10px 30px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header nav ul li:first-child a,
+header nav ul li:hover a{
+    color: var(--main-color);
+}
+
+header nav ul li a[target = _blank] {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+
+/* End Header */
+
+/* Start landing */
+.landing {
+    padding-bottom: var(--section-padding);
+    min-height: 100vh;
+    margin-top: 50px;
+    text-align: center;
+    background-image: url(../imgs/hero-bg.png);
+    background-size: 100%;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.landing h2 {
+    color: var(--main-color);
+    font-family: 'Philosopher', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.landing > p {
+    margin: 20px 0 30px 0;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+@media (max-width: 992px) {
+    .landing div img {
+        width: 100%;
+    }
+}
+
+.landing button {
+    text-transform: uppercase;
+    background-color: white;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    padding : 15px 35px;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.landing button:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+
+.landing .download-options {
+    display: flex;
+    justify-content: center;
+}
+
+.landing .download-options  .element {
+    margin-left: 40px;
+    display: flex;
+}
+
+@media (max-width: 576px) {
+    .landing .download-options .element {
+        margin-left: 20px;
+    }
+}
+
+.landing .download-options .element i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* End landing */
+
+/* Start about */
+
+.about {
+    padding-top: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) + 200px );
+}
+
+.about .container .row .box {
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 50px 20px;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+.about .container .row .box:hover {
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.1);
+}
+
+.about .container .row .box img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.about .container .row .box h2 {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.about .container .row .box p {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+/* from M screens tell the end */
+@media (min-width: 768px) {
+    .about .container .row  {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about .container .row .box {
+        width: 49%;
+    }
+}
+
+/* End about */
+
+/* Start servics */
+
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.services .container .options .box {
+    cursor: pointer;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    transition: 0.8s;
+    transition-property: box-shadow;
+}
+
+.services .container .options .box:hover {
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.1);
+}
+
+.services .container .options .box img{
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.services .container .options .box p {
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1.7px;
+}
+
+
+/* M screens */
+@media (min-width: 768px) {
+    .services .container .options{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .services .container .options .box{
+        width: 50%;
+    }
+}
+
+/* L screens */
+@media (min-width: 992px) {
+    .services .container .options {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .services .container .options .box{
+        width: 33.333%;
+    }
+}
+
+
+/* End servics */
+
+/* Start timeline */
+
+.timeline .container .options .box i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* End timeline */
+
+/* Start contact */
+
+.contact {
+    padding-bottom: var(--section-padding);
+    padding-top: var(--section-padding);
+}
+
+.contact .container .contact-info {
+    margin-bottom: 30px;
+}
+
+.contact .container .contact-info .box {
+    display: flex;
+    margin-bottom: 20px;
+}
+.contact .container .contact-info .box:nth-child(3) {
+    margin-bottom: 50px;
+}
+
+.contact .container .contact-info .box i {
+    font-size: 25px;
+    color: var(--main-color);
+    margin-right: 20px;
+}
+
+.contact .container .contact-info .box p {
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+.contact .container .contact-info iframe {
+    width: 100%;
+}
+
+.contact .container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .container form input:not(input[type = submit]),
+.contact .container form textarea {
+    border: 1px #d6d6d6 solid;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    text-transform: capitalize;
+}
+
+.contact .container form textarea {
+    height: auto;
+    max-width: 607px;
+}
+
+.contact .container form input:focus:not(input[type = submit]),
+.contact .container form textarea:focus {
+    outline: none;
+    border: 1px var(--main-color) solid;
+}
+
+.contact .container form button {
+    cursor: pointer;
+    color: white;
+    text-transform: capitalize;
+    max-width: 150px;
+    min-height: 40px;
+    padding: 0 20px;
+    border-radius: 20px;
+    border: 1px #d6d6d6 solid;
+    background-color: var(--main-color);
+    transition: 0.5s;
+    transition-property: background-color, box-shadow;
+    margin: 0 auto;
+}
+
+.contact .container form button:hover {
+    background-color: #92d283;
+}
+
+/* M screens */
+@media (min-width: 768px) {
+    .contact .container .content {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .contact .container .content form {
+        width: 49%;
+    }
+
+    .contact .container .content .contact-info {
+        width: 49%;
+    }
+}
+
+/* End contact */
+
+/* Start footer */
+
+footer {
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 25px 0;
+    border-top: 10px solid black;
+    text-align: center;
+}
+
+footer p:first-child {
+    margin-bottom: 10px;
+}
+
+footer p a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+/* End footer */

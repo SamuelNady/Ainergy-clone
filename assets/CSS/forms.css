@@ -1,0 +1,166 @@
+:root {
+    --color: rgba(0, 0, 0, 0.175);
+    --main-color: #ed893d;
+}
+
+.form .container{
+    margin: 50px 0 250px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form .container .form-box {
+    width: 800px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--color);
+}
+
+.form .container .form-box h2 {
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid var(--color);
+}
+
+.form .container .form-box .feilds {
+    padding: 20px 100px;
+}
+
+.form .container .form-box .feilds .input-feild {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.form .container .form-box .feilds .input-feild label {
+    margin-right: 20px;
+    min-height: 100%;
+    min-width: 157px;
+    text-align: end;
+    font-weight: bold;
+}
+
+.form .container .form-box .feilds .input-feild input:not(input[type = checkbox], input[type = radio]) {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 100;
+    transition: 0.2s;
+}
+
+.form .container .form-box .feilds .input-feild input:not(input[type = checkbox], input[type = radio]):focus {
+    box-shadow: 0 0 0 3px #93beff;
+    outline: none;
+}
+
+.form .container .form-box .feilds .select {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form .container .form-box .feilds .select label {
+    min-width: fit-content;
+    margin: 0;
+}
+
+.form .container .form-box .feilds .select input{
+    margin: 0 5px;
+}
+
+.form .container .form-box .feilds .control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form .container .form-box .feilds .control button {
+    cursor: pointer;
+    padding: 20px 35px;
+    margin-right: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.form .container .form-box .feilds .control button:hover {
+    background-color: blue;
+}
+
+.form .container .form-box .feilds .control a {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.form .container .form-box .feilds .control a:hover {
+    color: blue;
+}
+
+
+@media (max-width: 992px) {
+    .form .container .form-box {
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form .container .form-box {
+        width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form .container .form-box {
+        width: 100%;
+    }
+
+    .form .container .form-box .feilds {
+        padding: 20px 30px;
+    }
+
+    .form .container .form-box .feilds .input-feild {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form .container .form-box .feilds .input-feild label {
+        margin-bottom: 15px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .form .container .form-box .feilds .select {
+        
+        margin-bottom: 15px;
+    }
+
+    .form .container .form-box .feilds .select label {
+        display: flex;
+        align-items: center;
+    }
+
+    .form .container .form-box .feilds .control {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form .container .form-box .feilds .control button {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+}
