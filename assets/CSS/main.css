@@ -456,6 +456,14 @@ footer p a {
     font-style: italic;
 }
 
-
-
 /* End footer */
+
+.homeback-arrow {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 13px 15px;
+    border-radius: 7px;
+    background-color: var(--main-color);
+    color: white;
+}
