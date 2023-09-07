@@ -20,6 +20,15 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.dark {
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.dark-hover:hover {
+    box-shadow: 0 0 15px 10px rgb(255 255 255 / 16%) !important;
+}
+
 .container {
     padding: 0 20px;
     margin: 0 120px;
@@ -115,14 +124,22 @@ header nav ul {
     display: flex;
 }
 
+header nav ul li {
+    padding: 10px 0 10px 30px;
+}
+
 @media (max-width: 990px) {
     header nav ul {
         display: none;
+        overflow: hidden;
     }
-}
 
-header nav ul li {
-    padding: 10px 0 10px 30px;
+    header nav ul li {
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+        cursor: pointer;
+    }
 }
 
 header nav ul li a {
@@ -133,7 +150,7 @@ header nav ul li a {
 
 header nav ul li:first-child a,
 header nav ul li:hover a{
-    color: var(--main-color);
+    color: var(--main-color) !important;
 }
 
 header nav ul li a[target = _blank] {
@@ -141,7 +158,38 @@ header nav ul li a[target = _blank] {
     font-weight: bold;
 }
 
+.dark-header {
+    background-color: #1b1b1b;
+    box-shadow: 1px 0px 10px 1px rgb(255 253 253 / 31%);
+}
 
+.dark-logo {
+    color: white !important;
+}
+
+.ul-mob {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 52px;
+    left: 0;
+    animation: appear 0.3s linear;
+    z-index: 9999;
+}
+
+.dark-ul {
+    background-color: #1b1b1be3;
+}
+
+@keyframes appear {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 412px;
+    }
+}
 /* End Header */
 
 /* Start landing */
@@ -186,6 +234,21 @@ header nav ul li a[target = _blank] {
     margin: 30px 0;
     cursor: pointer;
     transition: 0.4s;
+}
+
+.landing .image {
+    position: relative;
+    z-index: -1;
+}
+
+.landing .image:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #00000054;
 }
 
 .landing button:hover {
@@ -287,6 +350,10 @@ header nav ul li a[target = _blank] {
 
 .services .container .options .box:hover {
     box-shadow: 0 0 15px 10px rgba(0,0,0,0.1);
+}
+
+.services .container .options .dark-box:hover {
+    box-shadow: 0 0 15px 10px rgb(255 255 255 / 16%) !important;
 }
 
 .services .container .options .box img{
@@ -433,6 +500,11 @@ header nav ul li a[target = _blank] {
     }
 }
 
+.dark-inputs {
+    background-color: #1b1b1b;
+    color: white;
+}
+
 /* End contact */
 
 /* Start footer */
@@ -458,12 +530,19 @@ footer p a {
 
 /* End footer */
 
-.homeback-arrow {
+.floating-button {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 50px;
     padding: 13px 15px;
     border-radius: 7px;
     background-color: var(--main-color);
     color: white;
+}
+
+.switch {
+    right: unset;
+    left: 20px;
+    cursor: pointer;
+    text-align: center;
 }
